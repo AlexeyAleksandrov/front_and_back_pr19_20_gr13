@@ -2,6 +2,9 @@ import './App.css';
 import Greeting from "./Greeting.jsx";
 import UserCard from "./UserCard.jsx";
 import TaskList from "./TaskList.jsx";
+import Counter from "./Counter.jsx";
+import RegistrationForm from "./RegistrationForm.jsx";
+import ColorPicker from "./ColorPicker.jsx";
 
 function App() {
     return (
@@ -13,6 +16,12 @@ function App() {
                 <UserCard name="Иван" role="Пользователь" avatarUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfVMhpKmVy_-iwfRLAiNiaDslMa-2oEz7KTw&s" isOnline={true}/>
 
                 <TaskList />
+
+                <Counter />
+
+                <RegistrationForm />
+
+                <ColorPicker />
             </div>
     );
 }
