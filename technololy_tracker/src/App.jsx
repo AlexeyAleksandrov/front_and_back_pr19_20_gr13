@@ -8,8 +8,15 @@ import ColorPicker from "./ColorPicker.jsx";
 import WindowSizeTracker from "./21/WindowSizeTracker.jsx";
 import UserProfile from "./21/UserProfile.jsx";
 import ContactForm from "./21/ContactForm.jsx";
+import UserSettings from "./22/UserSettings.jsx";
+import SimpleModalExample from "./22/SimpleModalExample.jsx";
+import ProgressDashboard from "./22/ProgressDashboard.jsx";
+import QuickActions from "./22/QuickActions.jsx";
+import useTechnologies from "./22/useTechnologies.js";
 
 function App() {
+    const { technologies, markAllCompleted, resetAll } = useTechnologies();
+
     return (
             <div className="App">
                 <h1>Моё React приложение</h1>
@@ -34,6 +41,19 @@ function App() {
                 <UserProfile />
 
                 <ContactForm />
+
+                {/* 22 */}
+                <UserSettings />
+
+                <SimpleModalExample />
+
+                <ProgressDashboard />
+
+                <QuickActions 
+                    onMarkAllCompleted={markAllCompleted}
+                    onResetAll={resetAll}
+                    technologies={technologies}
+                />
             </div>
     );
 }
