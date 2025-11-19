@@ -119,7 +119,7 @@ function App() {
   ];
 
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <div className="app">
         {/* навигационное меню */}
         <nav className="main-nav">
@@ -165,7 +165,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/user/:userId" element={<UserProfile />} />
+            <Route path="/user/:userId/:groupId/:starosta" element={<UserProfile />} />
             <Route path="/login" element={<Login onLogin={handleLogin} />} />
             
             {/* защищенный маршрут */}
