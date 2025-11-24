@@ -1,0 +1,114 @@
+/* контейнер доступной формы */
+.accessible-form-container {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: white;
+}
+
+.accessible-form-container h1 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+/* скрытый элемент только для скринридеров */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* сообщение об успехе */
+.success-message {
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+  color: #155724;
+}
+
+/* поле формы */
+.form-field {
+  margin-bottom: 20px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+  border-color: #3498db;
+}
+
+/* поля с ошибками */
+.form-field input.error,
+.form-field textarea.error {
+  border-color: #e74c3c;
+}
+
+.form-field input.error:focus,
+.form-field textarea.error:focus {
+  outline-color: #e74c3c;
+}
+
+/* текст ошибки */
+.error-text {
+  display: block;
+  color: #e74c3c;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* кнопка отправки */
+.accessible-form-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.accessible-form-container button:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.accessible-form-container button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.accessible-form-container button:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}

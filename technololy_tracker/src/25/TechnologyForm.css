@@ -1,0 +1,155 @@
+/* стили для формы добавления/редактирования технологии */
+.technology-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.technology-form h2 {
+  margin-top: 0;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* стили для группы полей */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+/* звездочка для обязательных полей */
+.form-group label.required::after {
+  content: " *";
+  color: #e74c3c;
+}
+
+/* стили для полей ввода */
+.form-group input[type="text"],
+.form-group input[type="url"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+/* стили для полей с ошибками */
+.form-group input.error,
+.form-group textarea.error {
+  border-color: #e74c3c;
+}
+
+/* сообщения об ошибках */
+.error-message {
+  display: block;
+  color: #e74c3c;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* стили для ресурсов */
+.resource-field {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: flex-start;
+}
+
+.resource-field input {
+  flex: 1;
+}
+
+.btn-remove {
+  padding: 10px 15px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: background-color 0.3s;
+}
+
+.btn-remove:hover {
+  background-color: #c0392b;
+}
+
+.btn-add-resource {
+  width: 100%;
+  padding: 10px;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  border: 1px dashed #bdc3c7;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.btn-add-resource:hover {
+  background-color: #d5dbdb;
+}
+
+/* кнопки действий */
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.btn-primary,
+.btn-secondary {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.btn-primary:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+}
+
+.btn-secondary:hover {
+  background-color: #d5dbdb;
+}
